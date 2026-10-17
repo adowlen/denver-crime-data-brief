@@ -1,0 +1,821 @@
+{
+ "meta": {
+  "dataset": "ODC_CRIME_OFFENSES_P (Denver Open Data, ArcGIS FeatureServer layer 324)",
+  "snapshot": "warehouse snapshots/2026-10-15/crime.parquet (Phase 2 pull, 2026-10-15)",
+  "rows": 383643,
+  "reported_date_min_denver": "2020-12-31 17:04:00-07:00",
+  "reported_date_max_denver": "2026-10-13 16:53:00-06:00",
+  "time_basis": "REPORTED_DATE converted to America/Denver local time",
+  "window_def": "matched window = Jan 1 to Oct 13 inclusive, each year",
+  "vehicle_types": [
+   "theft-of-motor-vehicle",
+   "theft-items-from-vehicle",
+   "theft-parts-from-vehicle",
+   "criminal-mischief-mtr-veh"
+  ]
+ },
+ "flags": {
+  "is_crime_1_rows": 383643,
+  "is_crime_other_rows": 0,
+  "is_traffic_1_rows": 0,
+  "is_traffic_0_rows": 383643
+ },
+ "full_year_totals": {
+  "2021": 65200,
+  "2022": 73320,
+  "2023": 71197,
+  "2024": 65106,
+  "2025": 60458
+ },
+ "window_totals": {
+  "2021": 51258,
+  "2022": 58455,
+  "2023": 56876,
+  "2024": 51308,
+  "2025": 47548,
+  "2026": 48331
+ },
+ "window_changes_pct": {
+  "2021_to_2022": 14.0,
+  "2022_to_2025": -18.7,
+  "2025_to_2026": 1.6
+ },
+ "full_year_change_2022_to_2025_pct": -17.5,
+ "vehicle_complex": {
+  "window_counts": {
+   "2021": 22867,
+   "2022": 28219,
+   "2023": 25213,
+   "2024": 17919,
+   "2025": 13923,
+   "2026": 11969
+  },
+  "share_of_window_pct": {
+   "2021": 44.6,
+   "2022": 48.3,
+   "2023": 44.3,
+   "2024": 34.9,
+   "2025": 29.3,
+   "2026": 24.8
+  },
+  "change_2022_to_2025_pct": -50.7,
+  "change_2025_to_2026_pct": -14.0,
+  "overall_share_of_all_rows_pct": 38.5
+ },
+ "non_vehicle": {
+  "window_counts": {
+   "2021": 28391,
+   "2022": 30236,
+   "2023": 31663,
+   "2024": 33389,
+   "2025": 33625,
+   "2026": 36362
+  },
+  "change_2022_to_2025_pct": 11.2,
+  "change_2025_to_2026_pct": 8.1,
+  "rose_every_window_year": true
+ },
+ "decomposition_2022_to_2025": {
+  "total_change": -10907,
+  "vehicle_change": -14296,
+  "non_vehicle_change": 3389
+ },
+ "categories_window": {
+  "aggravated-assault": {
+   "window_counts": {
+    "2021": 1964,
+    "2022": 2159,
+    "2023": 2248,
+    "2024": 2144,
+    "2025": 2036,
+    "2026": 1893
+   },
+   "change_2022_to_2025_pct": -5.7,
+   "change_2025_to_2026_pct": -7.0,
+   "share_of_2025_window_pct": 4.3
+  },
+  "all-other-crimes": {
+   "window_counts": {
+    "2021": 5334,
+    "2022": 5556,
+    "2023": 6226,
+    "2024": 6903,
+    "2025": 7018,
+    "2026": 7778
+   },
+   "change_2022_to_2025_pct": 26.3,
+   "change_2025_to_2026_pct": 10.8,
+   "share_of_2025_window_pct": 14.8
+  },
+  "arson": {
+   "window_counts": {
+    "2021": 123,
+    "2022": 143,
+    "2023": 96,
+    "2024": 96,
+    "2025": 134,
+    "2026": 108
+   },
+   "change_2022_to_2025_pct": -6.3,
+   "change_2025_to_2026_pct": -19.4,
+   "share_of_2025_window_pct": 0.3
+  },
+  "auto-theft": {
+   "window_counts": {
+    "2021": 9192,
+    "2022": 11946,
+    "2023": 9815,
+    "2024": 6997,
+    "2025": 4518,
+    "2026": 3394
+   },
+   "change_2022_to_2025_pct": -62.2,
+   "change_2025_to_2026_pct": -24.9,
+   "share_of_2025_window_pct": 9.5
+  },
+  "burglary": {
+   "window_counts": {
+    "2021": 4322,
+    "2022": 3903,
+    "2023": 3808,
+    "2024": 3773,
+    "2025": 3255,
+    "2026": 3055
+   },
+   "change_2022_to_2025_pct": -16.6,
+   "change_2025_to_2026_pct": -6.1,
+   "share_of_2025_window_pct": 6.8
+  },
+  "drug-alcohol": {
+   "window_counts": {
+    "2021": 1812,
+    "2022": 2291,
+    "2023": 3013,
+    "2024": 3467,
+    "2025": 2908,
+    "2026": 3567
+   },
+   "change_2022_to_2025_pct": 26.9,
+   "change_2025_to_2026_pct": 22.7,
+   "share_of_2025_window_pct": 6.1
+  },
+  "larceny": {
+   "window_counts": {
+    "2021": 7232,
+    "2022": 7879,
+    "2023": 8028,
+    "2024": 8306,
+    "2025": 9121,
+    "2026": 9870
+   },
+   "change_2022_to_2025_pct": 15.8,
+   "change_2025_to_2026_pct": 8.2,
+   "share_of_2025_window_pct": 19.2
+  },
+  "murder": {
+   "window_counts": {
+    "2021": 62,
+    "2022": 51,
+    "2023": 56,
+    "2024": 54,
+    "2025": 36,
+    "2026": 35
+   },
+   "change_2022_to_2025_pct": -29.4,
+   "change_2025_to_2026_pct": -2.8,
+   "share_of_2025_window_pct": 0.1
+  },
+  "other-crimes-against-persons": {
+   "window_counts": {
+    "2021": 1811,
+    "2022": 1961,
+    "2023": 2177,
+    "2024": 2361,
+    "2025": 2469,
+    "2026": 3039
+   },
+   "change_2022_to_2025_pct": 25.9,
+   "change_2025_to_2026_pct": 23.1,
+   "share_of_2025_window_pct": 5.2
+  },
+  "public-disorder": {
+   "window_counts": {
+    "2021": 7847,
+    "2022": 9306,
+    "2023": 8656,
+    "2024": 8066,
+    "2025": 7865,
+    "2026": 7841
+   },
+   "change_2022_to_2025_pct": -15.5,
+   "change_2025_to_2026_pct": -0.3,
+   "share_of_2025_window_pct": 16.5
+  },
+  "robbery": {
+   "window_counts": {
+    "2021": 914,
+    "2022": 1008,
+    "2023": 915,
+    "2024": 966,
+    "2025": 743,
+    "2026": 713
+   },
+   "change_2022_to_2025_pct": -26.3,
+   "change_2025_to_2026_pct": -4.0,
+   "share_of_2025_window_pct": 1.6
+  },
+  "theft-from-motor-vehicle": {
+   "window_counts": {
+    "2021": 9918,
+    "2022": 11376,
+    "2023": 10927,
+    "2024": 7138,
+    "2025": 6294,
+    "2026": 5858
+   },
+   "change_2022_to_2025_pct": -44.7,
+   "change_2025_to_2026_pct": -6.9,
+   "share_of_2025_window_pct": 13.2
+  },
+  "white-collar-crime": {
+   "window_counts": {
+    "2021": 727,
+    "2022": 876,
+    "2023": 911,
+    "2024": 1037,
+    "2025": 1151,
+    "2026": 1180
+   },
+   "change_2022_to_2025_pct": 31.4,
+   "change_2025_to_2026_pct": 2.5,
+   "share_of_2025_window_pct": 2.4
+  }
+ },
+ "category_counter_all_rows": {
+  "theft-from-motor-vehicle": 63149,
+  "larceny": 62080,
+  "public-disorder": 60493,
+  "auto-theft": 56687,
+  "all-other-crimes": 46993,
+  "burglary": 27425,
+  "drug-alcohol": 20188,
+  "other-crimes-against-persons": 16677,
+  "aggravated-assault": 15160,
+  "white-collar-crime": 7089,
+  "robbery": 6478,
+  "arson": 867,
+  "murder": 357
+ },
+ "top_fallers_2022_2025": [
+  {
+   "type": "theft-of-motor-vehicle",
+   "from": 11745,
+   "to": 4425,
+   "change": -7320
+  },
+  {
+   "type": "theft-items-from-vehicle",
+   "from": 6740,
+   "to": 4179,
+   "change": -2561
+  },
+  {
+   "type": "theft-parts-from-vehicle",
+   "from": 4636,
+   "to": 2115,
+   "change": -2521
+  },
+  {
+   "type": "criminal-mischief-mtr-veh",
+   "from": 5098,
+   "to": 3204,
+   "change": -1894
+  },
+  {
+   "type": "weapon-unlawful-discharge-of",
+   "from": 1490,
+   "to": 658,
+   "change": -832
+  },
+  {
+   "type": "burglary-business-by-force",
+   "from": 1486,
+   "to": 774,
+   "change": -712
+  }
+ ],
+ "top_risers_2022_2025": [
+  {
+   "type": "theft-shoplift",
+   "from": 1337,
+   "to": 2733,
+   "change": 1396
+  },
+  {
+   "type": "criminal-trespassing",
+   "from": 1407,
+   "to": 2224,
+   "change": 817
+  },
+  {
+   "type": "burglary-other",
+   "from": 0,
+   "to": 662,
+   "change": 662
+  },
+  {
+   "type": "drug-poss-paraphernalia",
+   "from": 722,
+   "to": 1315,
+   "change": 593
+  },
+  {
+   "type": "assault-simple",
+   "from": 1798,
+   "to": 2215,
+   "change": 417
+  },
+  {
+   "type": "threats-to-injure",
+   "from": 667,
+   "to": 1036,
+   "change": 369
+  }
+ ],
+ "top_risers_2025_2026": [
+  {
+   "type": "assault-simple",
+   "from": 2215,
+   "to": 2709,
+   "change": 494
+  },
+  {
+   "type": "theft-other",
+   "from": 3530,
+   "to": 4024,
+   "change": 494
+  },
+  {
+   "type": "criminal-trespassing",
+   "from": 2224,
+   "to": 2568,
+   "change": 344
+  },
+  {
+   "type": "disturbing-the-peace",
+   "from": 448,
+   "to": 758,
+   "change": 310
+  },
+  {
+   "type": "theft-from-bldg",
+   "from": 1358,
+   "to": 1656,
+   "change": 298
+  },
+  {
+   "type": "drug-pcs-other-drug",
+   "from": 782,
+   "to": 1020,
+   "change": 238
+  }
+ ],
+ "type_window_counts": {
+  "theft-shoplift": {
+   "2021": 1600,
+   "2022": 1337,
+   "2023": 1599,
+   "2024": 2404,
+   "2025": 2733,
+   "2026": 2613
+  },
+  "drug-poss-paraphernalia": {
+   "2021": 199,
+   "2022": 722,
+   "2023": 1236,
+   "2024": 1496,
+   "2025": 1315,
+   "2026": 1551
+  },
+  "assault-simple": {
+   "2021": 1659,
+   "2022": 1798,
+   "2023": 1985,
+   "2024": 2101,
+   "2025": 2215,
+   "2026": 2709
+  },
+  "criminal-trespassing": {
+   "2021": 1587,
+   "2022": 1407,
+   "2023": 1914,
+   "2024": 2184,
+   "2025": 2224,
+   "2026": 2568
+  },
+  "criminal-mischief-mtr-veh": {
+   "2021": 3928,
+   "2022": 5098,
+   "2023": 4620,
+   "2024": 3912,
+   "2025": 3204,
+   "2026": 2783
+  }
+ },
+ "monthly": {
+  "total": {
+   "2021-01": 5095,
+   "2021-02": 4576,
+   "2021-03": 5118,
+   "2021-04": 5271,
+   "2021-05": 5827,
+   "2021-06": 5818,
+   "2021-07": 5960,
+   "2021-08": 5837,
+   "2021-09": 5461,
+   "2021-10": 5421,
+   "2021-11": 5300,
+   "2021-12": 5516,
+   "2022-01": 5736,
+   "2022-02": 5440,
+   "2022-03": 6411,
+   "2022-04": 6155,
+   "2022-05": 6524,
+   "2022-06": 6127,
+   "2022-07": 6422,
+   "2022-08": 6578,
+   "2022-09": 6236,
+   "2022-10": 6307,
+   "2022-11": 5718,
+   "2022-12": 5666,
+   "2023-01": 6297,
+   "2023-02": 5476,
+   "2023-03": 5784,
+   "2023-04": 5593,
+   "2023-05": 6198,
+   "2023-06": 6284,
+   "2023-07": 6583,
+   "2023-08": 6331,
+   "2023-09": 5853,
+   "2023-10": 5840,
+   "2023-11": 5395,
+   "2023-12": 5563,
+   "2024-01": 5480,
+   "2024-02": 4852,
+   "2024-03": 5011,
+   "2024-04": 5032,
+   "2024-05": 5501,
+   "2024-06": 5241,
+   "2024-07": 5809,
+   "2024-08": 5961,
+   "2024-09": 5939,
+   "2024-10": 5967,
+   "2024-11": 4930,
+   "2024-12": 5383,
+   "2025-01": 5101,
+   "2025-02": 4344,
+   "2025-03": 4780,
+   "2025-04": 5006,
+   "2025-05": 5109,
+   "2025-06": 4933,
+   "2025-07": 5413,
+   "2025-08": 5363,
+   "2025-09": 5342,
+   "2025-10": 5263,
+   "2025-11": 4895,
+   "2025-12": 4909,
+   "2026-01": 4964,
+   "2026-02": 4636,
+   "2026-03": 4866,
+   "2026-04": 4772,
+   "2026-05": 5220,
+   "2026-06": 5515,
+   "2026-07": 5618,
+   "2026-08": 5533,
+   "2026-09": 5268
+  },
+  "vehicle": {
+   "2021-01": 2305,
+   "2021-02": 2017,
+   "2021-03": 2295,
+   "2021-04": 2438,
+   "2021-05": 2613,
+   "2021-06": 2558,
+   "2021-07": 2652,
+   "2021-08": 2552,
+   "2021-09": 2413,
+   "2021-10": 2387,
+   "2021-11": 2365,
+   "2021-12": 2621,
+   "2022-01": 2778,
+   "2022-02": 2799,
+   "2022-03": 3204,
+   "2022-04": 3129,
+   "2022-05": 3165,
+   "2022-06": 2994,
+   "2022-07": 3076,
+   "2022-08": 2969,
+   "2022-09": 2830,
+   "2022-10": 2890,
+   "2022-11": 2643,
+   "2022-12": 2572,
+   "2023-01": 3025,
+   "2023-02": 2611,
+   "2023-03": 2521,
+   "2023-04": 2418,
+   "2023-05": 2730,
+   "2023-06": 2890,
+   "2023-07": 2927,
+   "2023-08": 2620,
+   "2023-09": 2428,
+   "2023-10": 2497,
+   "2023-11": 2359,
+   "2023-12": 2332,
+   "2024-01": 2191,
+   "2024-02": 1697,
+   "2024-03": 1785,
+   "2024-04": 1806,
+   "2024-05": 1958,
+   "2024-06": 1841,
+   "2024-07": 1925,
+   "2024-08": 1907,
+   "2024-09": 1976,
+   "2024-10": 1979,
+   "2024-11": 1642,
+   "2024-12": 1754,
+   "2025-01": 1718,
+   "2025-02": 1395,
+   "2025-03": 1379,
+   "2025-04": 1428,
+   "2025-05": 1558,
+   "2025-06": 1355,
+   "2025-07": 1565,
+   "2025-08": 1476,
+   "2025-09": 1479,
+   "2025-10": 1487,
+   "2025-11": 1466,
+   "2025-12": 1516,
+   "2026-01": 1435,
+   "2026-02": 1243,
+   "2026-03": 1278,
+   "2026-04": 1099,
+   "2026-05": 1291,
+   "2026-06": 1337,
+   "2026-07": 1388,
+   "2026-08": 1251,
+   "2026-09": 1216
+  }
+ },
+ "district_window_2025": {
+  "6": 9982,
+  "3": 9806,
+  "2": 8747,
+  "1": 7035,
+  "5": 5830,
+  "4": 5163,
+  "7": 949,
+  "U": 33,
+  "nan": 3
+ },
+ "neighborhoods": {
+  "unmatched_rows_window": 321,
+  "unmatched_rows_all": 381,
+  "top_by_count_2025": [
+   {
+    "neighborhood": "Five Points",
+    "reports_2025": 3627,
+    "reports_2022": 3465,
+    "change_2022_to_2025_pct": 4.7,
+    "rate_2025_per_1000_units": 231.8
+   },
+   {
+    "neighborhood": "Central Park",
+    "reports_2025": 2710,
+    "reports_2022": 3146,
+    "change_2022_to_2025_pct": -13.9,
+    "rate_2025_per_1000_units": 215.7
+   },
+   {
+    "neighborhood": "Capitol Hill",
+    "reports_2025": 1817,
+    "reports_2022": 2046,
+    "change_2022_to_2025_pct": -11.2,
+    "rate_2025_per_1000_units": 143.3
+   },
+   {
+    "neighborhood": "DIA",
+    "reports_2025": 1711,
+    "reports_2022": 2415,
+    "change_2022_to_2025_pct": -29.2,
+    "rate_2025_per_1000_units": 896.5
+   },
+   {
+    "neighborhood": "CBD",
+    "reports_2025": 1683,
+    "reports_2022": 1984,
+    "change_2022_to_2025_pct": -15.2,
+    "rate_2025_per_1000_units": 443.5
+   },
+   {
+    "neighborhood": "Union Station",
+    "reports_2025": 1341,
+    "reports_2022": 2270,
+    "change_2022_to_2025_pct": -40.9,
+    "rate_2025_per_1000_units": 162.7
+   },
+   {
+    "neighborhood": "Gateway - Green Valley Ranch",
+    "reports_2025": 1312,
+    "reports_2022": 1653,
+    "change_2022_to_2025_pct": -20.6,
+    "rate_2025_per_1000_units": 78.5
+   },
+   {
+    "neighborhood": "East Colfax",
+    "reports_2025": 1258,
+    "reports_2022": 1262,
+    "change_2022_to_2025_pct": -0.3,
+    "rate_2025_per_1000_units": 263.1
+   },
+   {
+    "neighborhood": "Civic Center",
+    "reports_2025": 1252,
+    "reports_2022": 927,
+    "change_2022_to_2025_pct": 35.1,
+    "rate_2025_per_1000_units": 433.2
+   },
+   {
+    "neighborhood": "North Capitol Hill",
+    "reports_2025": 1242,
+    "reports_2022": 1127,
+    "change_2022_to_2025_pct": 10.2,
+    "rate_2025_per_1000_units": 209.3
+   }
+  ],
+  "top_by_rate_2025_excl_dia": [
+   {
+    "neighborhood": "Auraria",
+    "reports_2025": 428,
+    "acs_units": 107.0,
+    "rate_2025_per_1000_units": 3992.5
+   },
+   {
+    "neighborhood": "Sun Valley",
+    "reports_2025": 320,
+    "acs_units": 503.0,
+    "rate_2025_per_1000_units": 636.3
+   },
+   {
+    "neighborhood": "CBD",
+    "reports_2025": 1683,
+    "acs_units": 3794.0,
+    "rate_2025_per_1000_units": 443.5
+   },
+   {
+    "neighborhood": "Civic Center",
+    "reports_2025": 1252,
+    "acs_units": 2890.0,
+    "rate_2025_per_1000_units": 433.2
+   },
+   {
+    "neighborhood": "Elyria Swansea",
+    "reports_2025": 703,
+    "acs_units": 2147.0,
+    "rate_2025_per_1000_units": 327.5
+   },
+   {
+    "neighborhood": "Globeville",
+    "reports_2025": 588,
+    "acs_units": 1846.0,
+    "rate_2025_per_1000_units": 318.6
+   },
+   {
+    "neighborhood": "Lincoln Park",
+    "reports_2025": 1108,
+    "acs_units": 4095.0,
+    "rate_2025_per_1000_units": 270.6
+   },
+   {
+    "neighborhood": "East Colfax",
+    "reports_2025": 1258,
+    "acs_units": 4781.0,
+    "rate_2025_per_1000_units": 263.1
+   },
+   {
+    "neighborhood": "Northeast Park Hill",
+    "reports_2025": 912,
+    "acs_units": 3505.0,
+    "rate_2025_per_1000_units": 260.2
+   },
+   {
+    "neighborhood": "Five Points",
+    "reports_2025": 3627,
+    "acs_units": 15648.0,
+    "rate_2025_per_1000_units": 231.8
+   }
+  ],
+  "dia": [
+   {
+    "neighborhood": "DIA",
+    "slug": "dia",
+    "acs_units": 1908.0,
+    "reports_2021": 1722,
+    "reports_2022": 2415,
+    "reports_2023": 5439,
+    "reports_2024": 2559,
+    "reports_2025": 1711,
+    "reports_2026": 1721,
+    "vehicle_2025": 717,
+    "vehicle_share_2025_pct": 41.9,
+    "rate_2025_per_1000_units": 896.5,
+    "change_2022_to_2025_pct": -29.2,
+    "change_2025_to_2026_pct": 0.6
+   }
+  ],
+  "largest_count_gains_2022_2025": [
+   {
+    "neighborhood": "Civic Center",
+    "reports_2022": 927,
+    "reports_2025": 1252,
+    "change_2022_to_2025_pct": 35.1
+   },
+   {
+    "neighborhood": "City Park",
+    "reports_2022": 320,
+    "reports_2025": 377,
+    "change_2022_to_2025_pct": 17.8
+   },
+   {
+    "neighborhood": "University Hills",
+    "reports_2022": 538,
+    "reports_2025": 632,
+    "change_2022_to_2025_pct": 17.5
+   },
+   {
+    "neighborhood": "North Capitol Hill",
+    "reports_2022": 1127,
+    "reports_2025": 1242,
+    "change_2022_to_2025_pct": 10.2
+   },
+   {
+    "neighborhood": "Five Points",
+    "reports_2022": 3465,
+    "reports_2025": 3627,
+    "change_2022_to_2025_pct": 4.7
+   }
+  ],
+  "largest_count_drops_2022_2025": [
+   {
+    "neighborhood": "University Park",
+    "reports_2022": 560,
+    "reports_2025": 256,
+    "change_2022_to_2025_pct": -54.3
+   },
+   {
+    "neighborhood": "Regis",
+    "reports_2022": 243,
+    "reports_2025": 115,
+    "change_2022_to_2025_pct": -52.7
+   },
+   {
+    "neighborhood": "Southmoor Park",
+    "reports_2022": 357,
+    "reports_2025": 182,
+    "change_2022_to_2025_pct": -49.0
+   },
+   {
+    "neighborhood": "Kennedy",
+    "reports_2022": 422,
+    "reports_2025": 218,
+    "change_2022_to_2025_pct": -48.3
+   },
+   {
+    "neighborhood": "Hampden South",
+    "reports_2022": 1068,
+    "reports_2025": 585,
+    "change_2022_to_2025_pct": -45.2
+   }
+  ]
+ },
+ "traffic_accidents_service": {
+  "service": "ODC_CRIME_TRAFFICACCIDENTS5YR_P FeatureServer layer 325",
+  "queried_utc": "2026-10-17",
+  "note": "Counts via returnCountOnly REST queries; reported_date is a UTC timestamp field. Service description warns traffic data will be updated by end of Q4 2026 with slight changes. Despite the 5YR name, reported_date spans 2013-01-01 to 2026-10-14.",
+  "total_rows": 293334,
+  "reported_before_2020": 171314,
+  "count_2021_01_01_to_2026_10_14": 106035,
+  "window_2025_jan1_oct13": 13574,
+  "by_year": {
+   "2021": 18472,
+   "2022": 18081,
+   "2023": 18370,
+   "2024": 17585,
+   "2025": 17879,
+   "2026_partial_to_oct14": 15648
+  }
+ },
+ "victims": {
+  "total_victim_count_all_rows": 391545,
+  "mean_per_report": 1.021
+ }
+}
