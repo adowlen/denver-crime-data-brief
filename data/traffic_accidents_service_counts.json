@@ -1,0 +1,17 @@
+{
+  "service": "ODC_CRIME_TRAFFICACCIDENTS5YR_P FeatureServer layer 325",
+  "queried_utc": "2026-10-17",
+  "note": "Counts via returnCountOnly REST queries; reported_date is a UTC timestamp field. Service description warns traffic data will be updated by end of Q4 2026 with slight changes. Despite the 5YR name, reported_date spans 2013-01-01 to 2026-10-14.",
+  "total_rows": 293334,
+  "reported_before_2020": 171314,
+  "count_2021_01_01_to_2026_10_14": 106035,
+  "window_2025_jan1_oct13": 13574,
+  "by_year": {
+    "2021": 18472,
+    "2022": 18081,
+    "2023": 18370,
+    "2024": 17585,
+    "2025": 17879,
+    "2026_partial_to_oct14": 15648
+  }
+}

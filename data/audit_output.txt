@@ -1,0 +1,78 @@
+raw rows 383643 | clean rows 383643
+
+== 10.1.1 zero/null sentinel traps ==
+VICTIM_COUNT: nulls 0 | zeros 0 | min 1 | max 19
+REPORTED_DATE parse failures: 0
+GEO_LON nulls: 1 (not used in any rate)
+No range bucketing is used anywhere in this brief; no sentinel mapping exists to audit.
+
+== 10.1.2 boolean filter polarity (3-row samples) ==
+IS_CRIME value counts: {1: 383643}
+IS_TRAFFIC value counts: {0: 383643}
+3 sample rows (all rows are matched by IS_CRIME==1, excluded by IS_TRAFFIC==1):
+        OFFENSE_ID         OFFENSE_TYPE_ID  IS_CRIME  IS_TRAFFIC
+DP2021595526299900 criminal-mischief-other         1           0
+DP2025630814299900 criminal-mischief-other         1           0
+DP2021487459299900 criminal-mischief-other         1           0
+Polarity conclusion: the offenses ledger contains ZERO traffic rows; the
+vehicle grouping in this brief is an OFFENSE_TYPE_ID list, not a flag filter.
+
+== 10.1.3 numerator/denominator unit agreement ==
+All shares are reports/reports on the same window population; all rates are
+reports per 1,000 ACS housing units. Window totals in stats.json match recomputation.
+
+== 10.1.4 categorical exhaustiveness ==
+OFFENSE_CATEGORY_ID: 13 values, nulls 0
+OFFENSE_CATEGORY_ID
+theft-from-motor-vehicle        63149
+larceny                         62080
+public-disorder                 60493
+auto-theft                      56687
+all-other-crimes                46993
+burglary                        27425
+drug-alcohol                    20188
+other-crimes-against-persons    16677
+aggravated-assault              15160
+white-collar-crime               7089
+robbery                          6478
+arson                             867
+murder                            357
+OFFENSE_TYPE_ID distinct: 173 | nulls: 0
+Category partitions sum exactly to window totals for 2021, 2022, 2025, 2026.
+
+== 10.1.5 nullable-denominator trap ==
+IS_CRIME null share: 0.000%
+IS_TRAFFIC null share: 0.000%
+OFFENSE_CATEGORY_ID null share: 0.000%
+OFFENSE_TYPE_ID null share: 0.000%
+NEIGHBORHOOD_ID nulls: 381 of 383643 (0.10%) - excluded from neighborhood
+tables only, counted and printed; citywide totals never use the neighborhood subset.
+Panel reconciliation: panel window reports 313455 + unmatched 321 = 313776 window rows. OK
+
+== 10.2 join hygiene + control groups ==
+ACS allocation: 359,351 of 359,581 county units allocated (99.94%); unallocated slivers 230 units (0.06%).
+Five Points anchor: this build 15,648 units vs STR specimen's 15,639 (delta 0.06%).
+Control A (ground truth): DIA neighborhood rows by district: {'7': 11265, '5': 7622, 'U': 15, '3': 1, nan: 1}
+Control A: DIA top types overall: {'theft-of-motor-vehicle': 4908, 'theft-parts-from-vehicle': 2389, 'theft-items-from-vehicle': 2103} - airport-typical profile (vehicle theft, parts theft) confirms the geography fields cohere.
+Control B (ex-DIA robustness): window totals ex-DIA 2022 56040 -> 2025 45837; vehicle ex-DIA 26669 -> 13206 (-50.5%); non-vehicle ex-DIA still rises. Headline holds without DIA.
+
+== 12.3 censoring / effective window ==
+Snapshot REPORTED_DATE ceiling (Denver): 2026-10-13 16:53:00-06:00
+2026 coverage: Jan 1 - Oct 13 = 286 days. All cross-year comparisons use the
+matched Jan 1 - Oct 13 window; full-year figures are printed only for 2021-2025.
+Monthly chart series ends 2026-09 (last complete month): 2026-09
+
+== 12.6 visible exclusions (neighborhood rate table) ==
+Neighborhoods below the 1,000-unit rate floor: {'Auraria': 107, 'Sun Valley': 503}
+DIA excluded from the rate ranking by name (airport district) and reported separately.
+
+== definition-change scan (type births/deaths, window basis) ==
+Flagged types: ['burglary-other']
+burglary-other: 0 reports 2021-2023, then 407/662/720 - a coding birth in 2024.
+Brief uses burglary at CATEGORY level only; burglary-other is never cited as a rise.
+
+== sex-offense coverage check ==
+Types containing 'sex': ['sex-off-fail-to-register', 'sex-off-registration-viol', 'harassment-sexual-in-nature']
+No sexual-assault offense type or category exists in this public file.
+
+ALL SECTION 10 AUDIT ASSERTIONS PASSED
